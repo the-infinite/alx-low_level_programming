@@ -9,14 +9,14 @@
 */
 int main(void)
 {
-	char* str = "_putchar\0";
-	int c = *str;
+	char str[] = "_putchar\0";
+	int i;
 
-	for (c = 0; c != '\0'; ++c) {
-		_putchar(c);
-		str++; /* Increment the pointer */
-		c = *str; /* Allocate the character again  again so we move forward */
+	for (i = 0; i < 8; ++i)
+	{
+		_putchar(str[i]);
 	}
 	_putchar('\n');
+
 	return (0);
 }
