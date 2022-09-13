@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	char str[] = "_putchar\0";
+	char* str = "_putchar\0";
 	int c = *str;
 
 	for (c = 0; c != '\0'; ++c) {
