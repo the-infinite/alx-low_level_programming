@@ -12,11 +12,11 @@ int main(void)
 	char str[] = "_putchar\0";
 	int c = *str;
 
-	for (c = 0; c != '\0'; ++c)
+	for (c = 0; c != '\0'; ++c) {
 		_putchar(c);
 		str++; /* Increment the pointer */
 		c = *str; /* Allocate the character again  again so we move forward */
+	}
 	_putchar('\n');
-
 	return (0);
 }
