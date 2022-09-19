@@ -23,7 +23,7 @@ int _atoi(char *s)
 			/* We subtract the literal for 0 to convert this to a number */
 			sum = (sum * 10) + (*s - '0');
 		}
-		
+
 		else if (sum > 0)
 		{
 			break;
