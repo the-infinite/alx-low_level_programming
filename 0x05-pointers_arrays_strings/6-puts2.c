@@ -17,7 +17,7 @@ void puts2(char *str)
 		/* If this character is at an even offset */
 		if (i % 2 == 0)
 		{
-			_putchar(str[i]); /* We print it */ 
+			_putchar(str[i]); /* We print it */
 		}
 	}
 	_putchar('\n');
