@@ -1,6 +1,6 @@
 /**
  * swap_int - swaps the values of two integers using their references as basis
- *		
+ *
  *
  * @a: first integer
  * @b: second integer
