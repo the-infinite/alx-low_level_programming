@@ -3,7 +3,7 @@
 /**
 * raise - Raises 10 by a set value.
 *
-* @n: Raise 10 to power n 
+* @n: Raise 10 to power n
 * Return: 10 raised to @n
 */
 int raise(int n)
@@ -11,7 +11,7 @@ int raise(int n)
 	int ret = 1;
 	int i = n;
 
-	while(i > 0)
+	while (i > 0)
 	{
 		ret = ret * 10;
 		i--;
@@ -34,8 +34,8 @@ void print_number(int n)
 	{
 		_putchar(45); /* Start with the minus sign */
 	}
-	
-	if(value < 0)
+
+	if (value < 0)
 	{
 		value = value * -1; /* Absolute value only */
 	}
@@ -57,8 +57,8 @@ void print_number(int n)
 	{
 		/* Reduce digits before use otherwise it's positionally be +1 wrong */
 		char c = ((value / raise(--digits)) % 10) + 48;
-		_putchar(c);
 
+		_putchar(c);
 		if (digits < 1)
 		{
 			break;
