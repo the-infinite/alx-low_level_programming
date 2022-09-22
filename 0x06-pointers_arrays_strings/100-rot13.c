@@ -8,11 +8,13 @@
 char *rot13(char *s)
 {
 	char rotd[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM\0";
+
 	char norm[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\0";
 
 	for (int i = 0; s[i] != 0 && s[i] != '\n'; i++)
 	{
 		char c = s[i];
+
 		char rot = c;
 
 		for (int j = 0; j < 52; j++)
@@ -25,7 +27,6 @@ char *rot13(char *s)
 
 		s[i] = rot; /*Rotate this*/
 	}
-
 
 	return (s);
 }
