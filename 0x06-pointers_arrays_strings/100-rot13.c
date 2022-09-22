@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * rot13 - Rotates each character in a string by 13.
 *
