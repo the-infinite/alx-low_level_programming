@@ -13,11 +13,13 @@ char *rot13(char *s)
 
 	char norm[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\0";
 
-	for (int i = 0; s[i] != 0; i++)
+	int i, j;
+
+	for (i = 0; s[i] != 0; i++)
 	{
 		char c = s[i];
 
-		for (int j = 0; j < 52; j++)
+		for (j = 0; j < 52; j++)
 		{
 			if (norm[j] == c) /* If we have found a match */
 			{
