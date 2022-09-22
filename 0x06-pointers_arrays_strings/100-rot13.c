@@ -13,21 +13,17 @@ char *rot13(char *s)
 
 	char norm[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\0";
 
-	for (int i = 0; s[i] != 0 && s[i] != '\n'; i++)
+	for (int i = 0; s[i] != 0; i++)
 	{
 		char c = s[i];
-
-		char rot = c;
 
 		for (int j = 0; j < 52; j++)
 		{
 			if (norm[j] == c) /* If we have found a match */
 			{
-				rot = rotd[j]; /*Return the rotated character*/
+				s[i] = rotd[j]; /*Return the rotated character*/
 			}
 		}
-
-		s[i] = rot; /*Rotate this*/
 	}
 
 	return (s);
