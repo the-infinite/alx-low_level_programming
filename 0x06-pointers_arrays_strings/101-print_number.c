@@ -8,6 +8,7 @@
 void print_number(int n)
 {
 	int value = n;
+
 	int digits = 0;
 
 	if (n < 0) /* If this number is negative */
@@ -22,14 +23,13 @@ void print_number(int n)
 		temp /= 10;
 		digits++;
 		if (temp < 1)
-		{
 			break;
-		}
 	}
 
 	while (1)
 	{
 		int ret = 1;
+
 		int i = --digits;
 
 		while (i > 0)
@@ -41,8 +41,6 @@ void print_number(int n)
 
 		_putchar(c);
 		if (digits < 1)
-		{
 			break;
-		}
 	}
 }
