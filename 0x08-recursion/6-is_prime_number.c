@@ -7,24 +7,29 @@
 */
 int is_prime_number(int n)
 {
-	if(n < 2)
+	if (n < 2)
 	{
 		return 0;
 	}
 
-	else if(n < 4)
+	else if (n < 4)
 	{
 		return 1;
 	}
 
-	else if(n % 2 != 0)
+	else if (n % 2 != 0)
 	{
 		return 0;
+	}
+	
+	else if ((n + 1) % 2 == 0)
+	{
+		return is_prime_number(n / 3);
 	}
 
 	else
 	{
-		return is_prime_number(n/2);
+		return is_prime_number(n / 2);
 	}
 
 	return 1;
