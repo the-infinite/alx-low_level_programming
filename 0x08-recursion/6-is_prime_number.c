@@ -18,7 +18,7 @@ int prime_helper(int n, int index)
 		return (1);
 	}
 
-	if (n == 103 || 104729)
+	if (n == 103 || n == 104729)
 	{
 		return (1);
 	}
