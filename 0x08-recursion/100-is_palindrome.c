@@ -53,14 +53,14 @@ char *pal_rev_string(char *s)
 {
 	int bound, i;
 
+	char *ret;
+
 	bound = pal_strlen(s) - 1;
 
 	if (bound < 0)
 	{
 		return ("");
 	}
-
-	char *ret;
 
 	ret = malloc(sizeof(char) * (bound + 1));
 
