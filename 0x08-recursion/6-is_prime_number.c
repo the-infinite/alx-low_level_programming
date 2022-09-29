@@ -8,10 +8,6 @@
 */
 int prime_helper(int n, int index)
 {
-	int i, bound;
-
-	bound = n / 2;
-
 	if (n < 2)
 	{
 		return 0;
@@ -32,7 +28,7 @@ int prime_helper(int n, int index)
 		return 1;
 	}
 
-	return prime_helper(n, index+1)
+	return prime_helper(n, index+1);
 }
 
 /**
