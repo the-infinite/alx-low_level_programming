@@ -21,6 +21,12 @@ int _sqrt_recursion_wrapper(int n, int min, int max)
 		return (guess);
 	}
 
+	else if (min == max)
+	{
+		/*this means n doesn't have a perfect square*/
+		return (4096);
+	}
+
 	else if (guess_squared < n)
 	{
 		/*overshoot g if g squared is less than n*/
