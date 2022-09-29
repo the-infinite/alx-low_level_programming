@@ -10,25 +10,25 @@ int prime_helper(int n, int index)
 {
 	if (n < 2)
 	{
-		return 0;
+		return (0);
 	}
 
-	else if (n < 4)
+	if (n == 2 || n == 3)
 	{
-		return 1;
+		return (1);
 	}
 
-	else if (n % index != 0)
+	if (n % index != 0)
 	{
-		return 0;
+		return (0);
 	}
 
-	else if (index <= n / 2)
+	if (index <= n / 2)
 	{
-		return 1;
+		return (1);
 	}
 
-	return prime_helper(n, index+1);
+	return (prime_helper(n, index + 1));
 }
 
 /**
@@ -38,5 +38,5 @@ int prime_helper(int n, int index)
 */
 int is_prime_number(int n)
 {
-	return prime_helper(n, 2);
+	return (prime_helper(n, 2));
 }
