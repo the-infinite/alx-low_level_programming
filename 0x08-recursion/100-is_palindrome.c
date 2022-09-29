@@ -1,77 +1,26 @@
 #include <stdlib.h>
+#include <string.h>
 
 /**
 * pal_strlen - Finds the length of a string.
-* @s: the string.
+* @str: the string.
+* @s: The starting index.
+* @e: The ending index.
 * Return: The length of the string.
 */
-int pal_strlen(char *s)
+int pal_strlen(char *str, int s, int e)
 {
-	int len = 0;
+	if (s == e)
+		return (1);
 
-	while (s[len++])
-		;
+	if (str[s] != str[e])
+	return (0);
 
-	return (len);
-}
-
-/**
-* pal_str_equal - Checks to see if two strings are equal.
-* @a:  First string.
-* @b:  Second string.
-* Return: 1 is @a is @b and 0 otherwise.
-*/
-int pal_str_equal(char *a, char *b)
-{
-	int sa, sb, i;
-
-	sa = pal_strlen(a);
-	sb = pal_strlen(b);
-
-	if (sa != sb)
-	{
-		return (0);
-	}
-
-	for (i = 0; i < sa; i++)
-	{
-		if (a[i] != b[i])
-		{
-			return (0);
-		}
-	}
+	if (s < e + 1)
+		return (pal_strlen(str, s + 1, e - 1));
 
 	return (1);
 }
-
-/**
-* pal_rev_string - Reverses a string.
-* @s: The string to reverse.
-* Return: the string reversed.
-*/
-char *pal_rev_string(char *s)
-{
-	int bound, i;
-
-	char *ret;
-
-	bound = pal_strlen(s) - 1;
-
-	if (bound < 0)
-	{
-		return ("");
-	}
-
-	ret = malloc(sizeof(char) * (bound + 1));
-
-	for (i = 0; i < bound; i++)
-	{
-		ret[i] = s[bound - i];
-	}
-
-	return (ret);
-}
-
 
 /**
 * is_palindrome -  Checks to see if a string is a palindrome
@@ -80,5 +29,14 @@ char *pal_rev_string(char *s)
 */
 int is_palindrome(char *s)
 {
-	return (pal_str_equal(s, pal_rev_string(s)));
+	int n;
+
+	n = strlen(str);
+
+	if (n == 0)
+	{
+		return (1);
+	}
+
+	return (pal_strlen(s, 0, n - 1));
 }
