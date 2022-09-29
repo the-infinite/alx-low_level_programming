@@ -60,7 +60,9 @@ char *pal_rev_string(char *s)
 		return ("");
 	}
 
-	char *ret = malloc(sizeof(char) * (bound + 1));
+	char *ret;
+
+	ret = malloc(sizeof(char) * (bound + 1));
 
 	for (i = 0; i < bound; i++)
 	{
