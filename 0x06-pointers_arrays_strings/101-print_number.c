@@ -22,13 +22,19 @@ int raise(int n)
 }
 
 /**
-* digit_count - Calculates the number of digits in a base 10 number
-* @value: The number to check for digits
-* Return: The number of digits in @value
+* print_number - Prints the string value of a number.
+* @n: The number we wish to print.
+* Return: Does not return a value.
 */
-int digit_count(int value)
+void print_number(int n)
 {
-	int temp, digits = 0;
+	int value = n, temp, digits;
+
+	if (n < 0) /* If this number is negative */
+	{
+		_putchar(45); /* Start with the minus sign */
+		value = value * -1; /* Absolute value only */
+	}
 
 	temp = value; /*Used to calculate the number of digits temporarily */
 
@@ -39,28 +45,6 @@ int digit_count(int value)
 		if (temp < 1)
 			break;
 	}
-
-	return (digits);
-}
-
-/**
-* print_number - Prints the string value of a number.
-* @n: The number we wish to print.
-* Return: Does not return a value.
-*/
-void print_number(int n)
-{
-	int value = n;
-
-	int digits;
-
-	if (n < 0) /* If this number is negative */
-	{
-		_putchar(45); /* Start with the minus sign */
-		value = value * -1; /* Absolute value only */
-	}
-
-	digits = digit_count(value);
 
 	while (1)
 	{
